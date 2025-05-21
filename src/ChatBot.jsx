@@ -100,7 +100,8 @@ export default function ChatBot() {
       </div>
       <select onChange={(e) => handleSelect(e.target.value)} className="w-full p-2 border rounded">
         <option value="">Select an option...</option>
-        {[...initialOptions, ...orderOptions, ...issueTypes, ...languages].map(opt => (
+        {initialOptions.map(opt => (
+       
           <option key={opt} value={opt}>{opt}</option>
         ))}
       </select>
